@@ -106,3 +106,10 @@ function thisFunc(obj){
 
 thisFunc(newObj);
 console.log(newObj.result);
+
+// Print sum function and add as new key-value
+function printMessage(newObj){
+	newObj.output = newObj.a + " + " + newObj.b + " = " + newObj.result;
+	console.log(newObj.output);
+}
+printMessage(newObj);
