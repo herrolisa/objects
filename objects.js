@@ -121,5 +121,17 @@ function newFunc(obj){
 		obj.contents.push(ranNum);
 	}
 }
-var insCont = newFunc(plainBox);
+var insertContents = newFunc(plainBox);
 console.log(plainBox.contents);
+
+// Detecting transmission
+function transmission(obj){
+	if (obj.automaticTransmission){
+		return "You have an automatic transmission";
+	}
+	else{
+		return "You can drive stick? Awesome!";
+	}
+}
+var carType = transmission(stockCar);
+console.log(carType);
