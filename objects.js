@@ -138,8 +138,16 @@ console.log(carType);
 
 // Who's driving this thing?!
 function whosDriving(x,y){
-	stockCar.driver = y.name;
+	stockCar.driver = y;
 	return x;
 }
 whosDriving(stockCar,plainPerson);
 console.log(stockCar);
+
+// Final Boss
+// Call the posse, we ridin'!
+var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
+var passengersAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
+function carPassenger(a,b,c){
+
+}
