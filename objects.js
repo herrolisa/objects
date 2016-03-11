@@ -135,3 +135,11 @@ function transmission(obj){
 }
 var carType = transmission(stockCar);
 console.log(carType);
+
+// Who's driving this thing?!
+function whosDriving(x,y){
+	stockCar.driver = y.name;
+	return x;
+}
+whosDriving(stockCar,plainPerson);
+console.log(stockCar);
