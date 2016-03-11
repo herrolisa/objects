@@ -82,12 +82,12 @@ var arrayOfObjects = [
   }
 ];
 
-function printProcessedOrders(arrayOfObjects){
+function printProcessedOrders(orders){
 	for (var i = 0; i < arrayOfObjects.length; i++) {
 		console.log("=====");
-		console.log("id: " + arrayOfObjects[i].id);
-		console.log("purchase date: " + arrayOfObjects[i].date);
-		console.log("purchase total: " + arrayOfObjects[i].total);
+		console.log("id: " + orders[i].id);
+		console.log("purchase date: " + orders[i].date);
+		console.log("purchase total: " + orders[i].total);
 	}
 }
 printProcessedOrders(arrayOfObjects);
