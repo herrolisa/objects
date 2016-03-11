@@ -91,3 +91,18 @@ function printProcessedOrders(orders){
 	}
 }
 printProcessedOrders(arrayOfObjects);
+
+// Addition with an object
+var newObj = {
+	a: 50,
+	b: 25,
+	result: "This is result"
+};
+
+function thisFunc(obj){
+	obj.result = obj.a + obj.b;
+	return obj.result;
+}
+
+thisFunc(newObj);
+console.log(newObj.result);
