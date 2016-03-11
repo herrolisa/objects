@@ -113,3 +113,13 @@ function printMessage(obj){
 	console.log(obj.output);
 }
 printMessage(newObj);
+
+// Putting stuff in plainBox
+function newFunc(obj){
+	for (var i = 0; i < 10; i++) {
+		var ranNum = Math.floor((Math.random() * 10) + 1);
+		obj.contents.push(ranNum);
+	}
+}
+var insCont = newFunc(plainBox);
+console.log(plainBox.contents);
