@@ -15,3 +15,15 @@ var stockCar = {
 	driver: null,
 	passengers: [],
 };
+
+// Add new property inside a function
+var	plainPerson ={};
+function buildPerson(person,nameString,age){
+	person.name = nameString;
+	person.age = age;
+	return person;
+}
+buildPerson(plainPerson,"Lisa",27);
+console.log(plainPerson);
+console.log(plainPerson.name);
+console.log(plainPerson.age);
