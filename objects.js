@@ -21,7 +21,6 @@ var	plainPerson ={};
 function buildPerson(person,nameString,age){
 	person.name = nameString;
 	person.age = age;
-	return person;
 }
 buildPerson(plainPerson,"Lisa",27);
 console.log(plainPerson);
@@ -145,13 +144,31 @@ whosDriving(stockCar,plainPerson);
 console.log(stockCar);
 
 
+// var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
+// var passengersAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
+// function carPassenger(stockCar,passengerList,passengersAges){
+// 	for (var i = 0; i < passengerList.length; i++) {
+//         var eachPass = passengerList[i];
+//         var eachAge = passengersAges[i];
+//         stockCar.passengers.push({"name": eachPass , "age": eachAge});
+// 	}
+// }
+// carPassenger(stockCar,passengerList,passengersAges);
+// console.log(stockCar);
+
 var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
 var passengersAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
-function carPassenger(stockCar,passengerList,passengersAges){
-	for (var i = 0; i < passengerList.length; i++) {
-        var eachPass = passengerList[i];
-        var eachAge = passengersAges[i];
-        stockCar.passengers.push({"name": eachPass , "age": eachAge});
+function carPassenger(car, names, ages){
+	// lopp through passengers & ages to get value
+	for (var i = 0; i < names.length; i++) {
+		//console.log(names[i], ages[i]);
+		//build a blank person
+		var person={};
+		//console.log(person);
+		//pass one blank person, one name, and one age to build person
+		buildPerson(person,names[i],ages[i]);
+		//push new perspn into passengers array
+		car.passengers.push(person);
 	}
 }
 carPassenger(stockCar,passengerList,passengersAges);
