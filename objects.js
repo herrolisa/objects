@@ -144,10 +144,24 @@ function whosDriving(x,y){
 whosDriving(stockCar,plainPerson);
 console.log(stockCar);
 
-// Final Boss
-// Call the posse, we ridin'!
+
 var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', 'Marifel', 'Victor'];
 var passengersAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
-function carPassenger(a,b,c){
-
+function carPassenger(stockCar,passengerList,passengersAges){
+	for (var i = 0; i < passengerList.length; i++) {
+        var eachPass = passengerList[i];
+        var eachAge = passengersAges[i];
+        stockCar.passengers.push({"name": eachPass , "age": eachAge});
+	}
 }
+carPassenger(stockCar,passengerList,passengersAges);
+console.log(stockCar);
+
+// Display passengers
+function ridingDirty(stockCar){
+	for (var i = 0; i < stockCar.passengers.length; i++) {
+		console.log(stockCar.passengers[i].name + ", " + "age " + stockCar.passengers[i].age + ", " + "is riding dirty!");
+	}
+}
+
+ridingDirty(stockCar);
